@@ -12,7 +12,12 @@ const Index: React.FC = (props) => {
   const [toDoList, setToDoList] = useState(toDoListMockData);
 
   return (
-    <PageContainer>
+    <PageContainer
+      header={{
+        title: false,
+        breadcrumb: {},
+      }}
+    >
       <CreateNewItemHeader />
 
       <Row gutter={[16, 16]}>
