@@ -1,7 +1,3 @@
-# Ant Design Pro
-
-This project is initialized with [Ant Design Pro](https://pro.ant.design). Follow is the quick guide for how to use.
-
 ## Environment Prepare
 
 Install `node_modules`:
@@ -18,8 +14,6 @@ yarn
 
 ## Provided Scripts
 
-Ant Design Pro provides some useful script to help you quick start and build with web project, code style check and test.
-
 Scripts provided in `package.json`. It's safe to modify or add additional script:
 
 ### Start project
@@ -28,30 +22,38 @@ Scripts provided in `package.json`. It's safe to modify or add additional script
 npm start
 ```
 
-### Build project
+or
 
 ```bash
-npm run build
+yarn start
 ```
 
-### Check code style
+Username: joidea
 
-```bash
-npm run lint
-```
+Password: joidea
 
-You can also use script to auto fix some lint error:
+### Task Requirements
 
-```bash
-npm run lint:fix
-```
+Over a period of 3 days (72 hours), you will need to develop a simple web-based application using the following technologies:
 
-### Test code
+#### Frontend: HTML5 + CSS + JavaScript
+- The application must follow HTML5 standard.
+- You can choose any CSS framework to styling the frontend page.
+- JavaScript is required to demonstrate the ability to dynamically update the web page without reloading the page through AJAJ principles. React.js is desirable.
+- Demonstrate a simple Click interface.
 
-```bash
-npm test
-```
 
-## More
+#### Task Description
+A simple to-do list web-based application that allows the user to manage multiple to-do lists.
+- User can create/edit/delete multiple to-do lists on one page.
+- Users can click an item to cross it out. A subsequent click restores its original, uncrossed appearance.
+- Each to-do list has its own list name.
+- Each item in a to-do list contains two attributes: title and description.
+- Title is a mandatory field. Description is an optional field. When the description is empty, only show the item title.
+- Each item has a checkbox to indicate whether the item has been done or not.
+- Any changes (e.g., the status of to-do item, edit item information) made on the web page need to be saved through useState.
 
-You can view full document on our [official website](https://pro.ant.design). And welcome any feedback in our [github](https://github.com/ant-design/ant-design-pro).
+#### Submission
+- The submission deadline is 72 hours after receiving this email.
+- Your submission should be a zipped copy of your project and a simple documentation of how to deploy.
+- Email the zipped file to start@joidea.com
