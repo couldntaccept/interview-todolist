@@ -1,3 +1,15 @@
+## Implementation Notes
+All the requirements have been implemented.
+
+*to-do Item deletion is not implemented as it is not required*
+
+The web application can be deployed and accessed via the original designed way.
+
+### Potential Alternative Implementation Rationale
+For the requirement "Users can click an item to cross it out. A subsequent click restores its original, uncrossed appearance.",
+The implementation is to let the user click on the check box to cross out the item.
+As in my opinion, click on the check box is a more common and intuitive way to mark the item as done.
+
 ## Environment Prepare
 
 Install `node_modules`:

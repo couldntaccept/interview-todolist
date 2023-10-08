@@ -1,29 +1,38 @@
 import Delete from "@/assets/delete.png";
 import Edit from "@/assets/edit.png";
 import { Checkbox } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import { toDoListMockSubDataType } from "../../model";
 import styles from "./style.less";
 
 const SubItemRender: React.FC<{
   item: toDoListMockSubDataType;
   index: number;
+  onItemChange: (updatedItem: toDoListMockSubDataType) => void;
 }> = (props) => {
-  const { item, index } = props;
+  const { item, index, onItemChange } = props;
+  const [isDone, setIsDone] = useState(item.isFinished);
+
+  const handleToggleDone = () => {
+    const updatedIsDone = !isDone;
+    setIsDone(updatedIsDone);
+    onItemChange({
+      ...item,
+      isFinished: updatedIsDone,
+    });
+  };
 
   const getSubItemBg = index % 2 === 0 ? "#F2F2F2" : "#D6D6D6";
 
   return (
     <div
       className={styles.subItemRenderContainer}
-      style={{
-        background: getSubItemBg,
-      }}
+      style={{ background: getSubItemBg }}
     >
       <div className={styles.nameContainer}>
         <div className={styles.content}>
-          <Checkbox defaultChecked={item.isFinished} />
-          <div>{item.name}</div>
+          <Checkbox checked={isDone} onChange={handleToggleDone} />
+          <div className={isDone ? styles.crossedOut : ""}>{item.name}</div>
         </div>
 
         <div className={styles.content}>
@@ -32,7 +41,7 @@ const SubItemRender: React.FC<{
         </div>
       </div>
 
-      <div>{item.description}</div>
+      {item.description && <div>{item.description}</div>}
     </div>
   );
 };
